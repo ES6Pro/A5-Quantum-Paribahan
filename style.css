@@ -1,3 +1,12 @@
+body {
+  background-color: black;
+}
+
+/*navbar section*/
+.navbar bg-base-100 {
+  background-color: white;
+}
+
 /* CSS for the banner section */
 
 .banner {
@@ -78,7 +87,7 @@
 /* CSS for the section */
 .offers-section {
   padding: 50px;
-  background-color: #f9f9f9;
+  background-color: black;
   text-align: center;
 }
 
@@ -166,8 +175,4 @@
 .selected {
   background-color: #007bff;
   color: white;
-}
-
-#phone {
-  margin-right: 10px;
 }
