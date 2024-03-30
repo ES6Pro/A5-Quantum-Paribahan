@@ -235,9 +235,7 @@ body {
 }
 
 /* Style for quantum-8th */
-.quantum-8th {
-  /* You can add additional styling for quantum-8th if needed */
-}
+
 
 /* Style for quantum-8th h1 */
 .quantum-8th h1 {
@@ -250,3 +248,119 @@ body {
 .quantum-6th{color: #000;
 display: grid;
 grid-auto-columns: min-content;}
+
+
+/* Seat selection section styles */
+
+/* Style for seat-1 */
+.seat-1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Style for seat-2 */
+.seat-2 {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Style for seat-2 h2 */
+.seat-2 h2 {
+  margin-bottom: 20px;
+}
+
+/* Style for seat-2y */
+.seat-2y {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Style for seat-2y img */
+.seat-2y img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Style for seat-2y p */
+.seat-2y p {
+  margin: 0;
+}
+
+/* Style for seat-4 */
+.seat-4 {
+  height: 20px;
+}
+
+/* Style for seat-5 */
+.seat-5 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Style for SeatNo */
+.SeatNo {
+  background-color: #ddd;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style for SeatNo:hover */
+.SeatNo:hover {
+  background-color: #ccc;
+}
+
+/* Style for seat-3 */
+.seat-3 {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Style for seat-3 h2 */
+.seat-3 h2 {
+  margin-bottom: 10px;
+}
+
+/* Style for seat-3 p */
+.seat-3 p {
+  margin-bottom: 5px;
+}
+
+/* Style for seat-3 h3 */
+.seat-3 h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Style for seat-3 input[type="text"] */
+.seat-3 input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style for seat-3 input[type="button"] */
+.seat-3 input[type="button"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style for seat-3 input[type="button"]:hover */
+.seat-3 input[type="button"]:hover {
+  background-color: #0056b3;
+}

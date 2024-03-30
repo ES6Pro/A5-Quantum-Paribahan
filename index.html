@@ -198,71 +198,47 @@
       </div>
     </section>
 
+
+
+
     <section>
-      <script>
-        var selectedSeats = [];
-        var bookingCount = 0;
-        var totalPrice = 0;
+<!--seat section-->
+<div class="seat-1">
+  <div class="seat-2">
 
-        function toggleSeat(seatId) {
-          var seat = document.getElementById(seatId);
-          if (selectedSeats.includes(seatId)) {
-            // Deselect the seat
-            var index = selectedSeats.indexOf(seatId);
-            selectedSeats.splice(index, 1);
-            seat.classList.remove("selected");
-            bookingCount--;
-          } else {
-            // Select the seat
-            selectedSeats.push(seatId);
-            seat.classList.add("selected");
-            bookingCount++;
-          }
+    <h2>Select Your Seat</h2>
+    <div class="seat-2y">
+ <img src="images/seat-gray.png" alt="">
+      <p>
+      Available</p>
+    <p>selected</p></div>
+    <div class="seat-4"></div>
+    <div class="seat-5">
 
-          updateBookingDetails();
-        }
+     <div class="SeatNo">A1</div>
+     <div class="SeatNo">A2</div>
+     <div class="SeatNo">B1</div>
+     <div class="SeatNo">B2</div>
+     <div class="SeatNo">C1</div>
+     <div class="SeatNo">C2</div>
+     <div class="SeatNo">D1</div>
+     <div class="SeatNo">D2</div>
 
-        function updateBookingDetails() {
-          var pricePerSeat = 550; // Price per seat
-          totalPrice = bookingCount * pricePerSeat;
-
-          document
-            .getElementById("booking-form")
-            .querySelector('button[type="submit"]').disabled = true; // Disable next button by default
-
-          // Enable next button if phone number is filled
-          if (document.getElementById("phone").value.trim() !== "") {
-            document.getElementById("next-btn").disabled = false;
-          }
-
-          // Update UI with updated booking count and total price
-          // You can display this information wherever you want in your UI
-          console.log("Booking Count:", bookingCount);
-          console.log("Total Price:", totalPrice);
-        }
-
-        function checkPhoneNumber() {
-          var phoneInput = document.getElementById("phone");
-          var nextButton = document.getElementById("next-btn");
-
-          if (phoneInput.value.trim() !== "") {
-            nextButton.disabled = false;
-          } else {
-            nextButton.disabled = true;
-          }
-        }
-
-        // Prevent form submission for demonstration purpose
-        document
-          .getElementById("booking-form")
-          .addEventListener("submit", function (event) {
-            event.preventDefault();
-            alert(
-              "Thank you for Booking Our Bus Seats. We are working hard to find the best service and deals for you. Shortly you will find a confirmation in your email."
-            );
-          });
-      </script>
-    </section>
+    </div>
+  </div>
+  <div class="seat-3">
+    <h2>Select Your Seat</h2>
+    <p>seat</p>
+    <p>class</p>
+    <p>price</p>
+    <h3>total price</h3>
+    <input type="text" placeholder="Have any coupon">
+    <input type="button" value="Apply">
+    <p>grand total</p>
+  </div>
+  
+</div>
+   
     <script src="script.js"></script>
   </body>
 </html>
