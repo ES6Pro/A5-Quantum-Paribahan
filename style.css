@@ -161,17 +161,17 @@ body {
 /* Style for quantum-1st */
 .quantum-1st {
   padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 8px;
+  background-color: black; /* Add a semicolon here */
+  border-radius: 8px; /* Separate properties with semicolons */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Align children horizontally */
-  justify-content: center; /* Align children vertically */
+  align-items: center;
+  justify-content: center; 
 }
 
 /* Style for quantum-1st h1 */
 .quantum-1st h1 {
-  color: #333;
+  color: wheat;
   font-size: 24px;
   text-align: center;
   margin-bottom: 10px;
@@ -180,7 +180,7 @@ body {
 
 /* Style for quantum-1st p */
 .quantum-1st p {
-  color: black;
+  color: white;
   text-align: center;
   font-size: 18px;
   margin-bottom: 20px; /* Align text horizontally */
@@ -211,13 +211,13 @@ body {
 .quantum-4rth h1 {
   margin: 10px 0;
   font-size: 24px;
-  color: #333;
+  color: wheat;
 }
 
 /* Style for quantum-4rth p */
 .quantum-4rth p {
   margin: 0;
-  color: #666;
+  color: white;
 }
 
 /* Style for quantum-7th */
@@ -245,122 +245,84 @@ body {
 
 .quantum-5th{display: flex;}
 
-.quantum-6th{color: #000;
-display: grid;
-grid-auto-columns: min-content;}
+.quantum-6th {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2, min-content); /* Display as 2 columns */
+  gap: 10px; /* Add gap between grid items if needed */
+}
+
 
 
 /* Seat selection section styles */
-
-/* Style for seat-1 */
-.seat-1 {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+/* Get in Touch section styles */
+/* Get in Touch section styles */
+#contact {
+  background-color: black;
+  padding: 50px 0;
 }
 
-/* Style for seat-2 */
-.seat-2 {
-  background-color: #f2f2f2;
-  padding: 20px;
-  border-radius: 8px;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
-/* Style for seat-2 h2 */
-.seat-2 h2 {
+.container h2 
+  {
+    color: wheat;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+.container p {
+ 
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px }
+
+.form-group {
   margin-bottom: 20px;
+  text-align: left;
 }
 
-/* Style for seat-2y */
-.seat-2y {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-/* Style for seat-2y img */
-.seat-2y img {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-
-/* Style for seat-2y p */
-.seat-2y p {
-  margin: 0;
-}
-
-/* Style for seat-4 */
-.seat-4 {
-  height: 20px;
-}
-
-/* Style for seat-5 */
-.seat-5 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
-
-/* Style for SeatNo */
-.SeatNo {
-  background-color: #ddd;
-  padding: 10px;
-  text-align: center;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* Style for SeatNo:hover */
-.SeatNo:hover {
-  background-color: #ccc;
-}
-
-/* Style for seat-3 */
-.seat-3 {
-  background-color: #f2f2f2;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-/* Style for seat-3 h2 */
-.seat-3 h2 {
-  margin-bottom: 10px;
-}
-
-/* Style for seat-3 p */
-.seat-3 p {
+label {
+  display: block;
+  font-weight: bold;
   margin-bottom: 5px;
 }
 
-/* Style for seat-3 h3 */
-.seat-3 h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-/* Style for seat-3 input[type="text"] */
-.seat-3 input[type="text"] {
+input[type="text"],
+input[type="email"],
+textarea {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 5px;
 }
 
-/* Style for seat-3 input[type="button"] */
-.seat-3 input[type="button"] {
+textarea {
+  height: 150px;
+}
+
+button[type="submit"] {
   background-color: #007bff;
   color: #fff;
-  border: none;
   padding: 10px 20px;
-  border-radius: 4px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* Style for seat-3 input[type="button"]:hover */
-.seat-3 input[type="button"]:hover {
+button[type="submit"]:hover {
   background-color: #0056b3;
 }
+

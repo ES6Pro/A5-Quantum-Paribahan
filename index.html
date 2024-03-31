@@ -168,7 +168,7 @@
           <div class="quantum-3rd">
             <div class="quantum-5th">
               <div class="quantum-7th">
-                <img src="images/bus-logo.png" style="background-color: white; align-items: center;"></div>
+                <img src="images/bus-logo.png" style="background-color: green; align-items: center;"></div>
               <div class="quantum-8th">
                 <h1>Quantum Paribahan</h1>
               </div>
@@ -203,42 +203,213 @@
 
     <section>
 <!--seat section-->
-<div class="seat-1">
-  <div class="seat-2">
+<!-- Seat Selection Section -->
+<section>
+  <style>
+    /* Apply general styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-    <h2>Select Your Seat</h2>
-    <div class="seat-2y">
- <img src="images/seat-gray.png" alt="">
-      <p>
-      Available</p>
-    <p>selected</p></div>
-    <div class="seat-4"></div>
-    <div class="seat-5">
+    /* Container styles */
+    .menu-container {
+      display: flex;
+      justify-content: space-around;
+    }
 
-     <div class="SeatNo">A1</div>
-     <div class="SeatNo">A2</div>
-     <div class="SeatNo">B1</div>
-     <div class="SeatNo">B2</div>
-     <div class="SeatNo">C1</div>
-     <div class="SeatNo">C2</div>
-     <div class="SeatNo">D1</div>
-     <div class="SeatNo">D2</div>
+    .main-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+      gap: 10px;
+    }
 
+    .seat-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+
+    .Cart-container {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 300px;
+    }
+
+    /* Seat button styles */
+    .seat-btn {
+      flex: 0 0 calc(33.33% - 10px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    }
+
+    .seat-btn h1 {
+      margin: 0;
+    }
+
+    /* Selected seat section styles */
+    .selected-seat {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .selected-seat .seat,
+    .selected-seat .class,
+    .selected-seat .price {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    /* Coupon code section styles */
+    .coupon-code {
+      margin-bottom: 20px;
+    }
+
+    .coupon-code input[type="text"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .coupon-code button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .coupon-code button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Grand total section styles */
+    .padding {
+      padding-bottom: 20px;
+    }
+
+    /* Selected seat container box shadow */
+    #selected-seat-container {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    }
+
+    
+
+
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <h3>Abailaible Seat: <span class="price-color" id="aseat">8</span>$</h3>
+
+    <h3>left Seat: <span class="price-color" id="left">0</span>$</h3>
+  </div>
+  <div class="main-container">
+    <div class="seat-container">
+      <div class="seat-btn">
+        <h1>A1</h1>
+        <p>Category: <span>economy</span></p>
+        <p>Price: <span>550tk</span></p>
+      </div>
+      <div class="seat-btn">
+        <h1>A2</h1>
+        <p>Category: <span>economy</span></p>
+        <p>Price: <span>550tk</span></p>
+      </div>
+      <div class="seat-btn">
+        <h1>B1</h1>
+        <p>Category: <span>economy</span></p>
+        <p>Price: <span>550tk</span></p>
+      </div>
+      <div class="seat-btn">
+        <h1>B2</h1>
+        <p>Category: <span>economy</span></p>
+        <p>Price: <span>550tk</span></p>
+      </div>
+      <div class="seat-btn">
+        <h1>C1</h1>
+        <p>Category: <span>economy</span></p>
+        <p>Price: <span>550tk</span></p>
+      </div>
+      <div class="seat-btn">
+        <h1>C2</h1>
+        <p>Category: <span>economy</span></p>
+        <p>Price: <span>550tk</span></p>
+      </div>
+      <div class="seat-btn">
+        <h1>D1</h1>
+        <p>Category: <span>economy</span></p>
+        <p>Price: <span>550tk</span></p>
+      </div>
+      <div class="seat-btn">
+        <h1>D2</h1>
+        <p>Category: <span>economy</span></p>
+        <p>Price: <span>550tk</span></p>
+      </div>
+    </div>
+
+    <div class="Cart-container">
+      <h2>Select Your Seat</h2>
+      <hr />
+      <div class="selected-seat">
+        <div class="seat">Seat</div>
+        <div class="class">Class</div>
+        <div class="price">Price</div>
+      </div>
+      <div id="selected-seat-container"></div>
+      <hr />
+      <div class="coupon-code">
+        <input id="coupon-code" type="text" placeholder="Coupon Code" />
+        <button id="apply-btn">Apply</button>
+      </div>
+      <hr />
+      <h3 class="padding">Grand Total: <span id="grand-total">0</span>$</h3>
     </div>
   </div>
-  <div class="seat-3">
-    <h2>Select Your Seat</h2>
-    <p>seat</p>
-    <p>class</p>
-    <p>price</p>
-    <h3>total price</h3>
-    <input type="text" placeholder="Have any coupon">
-    <input type="button" value="Apply">
-    <p>grand total</p>
+ 
+    </div>
+    
+</section>
+
+<!-- Get in Touch section -->
+<section id="contact">
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <p>Have a question or want to get in touch? Fill out the form below and we'll get back to you as soon as possible.</p>
+    <form id="contact-form" method="post" action="send_message.php">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
   </div>
-  
-</div>
+</section>
+
+
+ 
+
    
     <script src="script.js"></script>
   </body>
 </html>
+
+
+ 
